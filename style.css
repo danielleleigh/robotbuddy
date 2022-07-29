@@ -3,10 +3,8 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	background-image:linear-gradient(45deg, rgb(104, 55, 225), rgb(240, 12, 126));
 	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
+	-webkit-background-clip: text; /*background clipped by text*/
 	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color: transparent
 }
 
 body {
@@ -14,8 +12,9 @@ body {
 }
 
 .music {
-	margin-left: 30%;
+	margin-left: 40%;
 	padding-bottom: 5px;
+	
 }
 .robots {
 }
@@ -44,13 +43,10 @@ p {
 	width: 200px; 
 	margin: 0 auto; 
 	height: 150px; 
-	border-radius: 200px 200px 0 0; 
+	border-radius: 200px 200px 0 0; /* top-left | top-right | bottom-right | bottom-left */
 	margin-bottom: 10px;
 } 
 
-.eyes {
-	color: #A5CF38;
-}
 
 .head:hover {
 	width: 300px;
@@ -60,14 +56,20 @@ p {
 .upper_body { 
 	width: 300px; 
 	height: 150px;
-	display: flex; 
+	display: flex; /*displays as flexible structure. helps us to align and distribute space among items*/
 	margin: auto;
+	transition: 1s ease-in;
+} 
+
+.upper_body:hover { 
+	transition: 1s ease-in-out;
+	width: 400px;
 } 
 
 .left_arm, .right_arm { 
 	width: 40px; 
 	height: 125px;
-	border-radius: 100px; 
+	border-radius: 100px; /*rounds corners*/
 } 
 
 .left_arm { 
@@ -75,11 +77,10 @@ p {
 } 
 
 .left_arm:hover {
-	-webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+	-webkit-transform: rotate(90deg); /*confirm rotation work in chrome & safari*/
+    -moz-transform: rotate(90deg); /*confirm rotation works in mozilla*/
+    -ms-transform: rotate(90deg);/*confirm rotation works in edge*/
+    transform: rotate(90deg);/*gives elements 2d or 3d transformations*/
 }
 
 .right_arm { 
@@ -87,17 +88,16 @@ p {
 } 
 
 .right_arm:hover {
-	-webkit-transform:rotate(106deg);
-    -moz-transform: rotate(106deg);
-    -o-transform: rotate(106deg);
-    -ms-transform: rotate(106deg);
-    transform: rotate(106deg);
+	-webkit-transform:rotate(106deg);/*confirm rotation work in chrome & safari*/
+    -moz-transform: rotate(106deg);/*confirm rotation works in mozilla*/
+    -ms-transform: rotate(106deg);/*confirm rotation works in edge*/
+    transform: rotate(106deg);/*gives elements 2d or 3d transformations*/
 }
 
 .torso { 
 	width: 200px; 
 	height: 200px;
-	border-radius: 0 0 50px 50px; 
+	border-radius: 0 0 50px 50px; /* top-left | top-right | bottom-right | bottom-left */
 } 
 
 .lower_body { 
@@ -110,7 +110,7 @@ p {
 .left_leg, .right_leg { 
 	width: 40px; 
 	height: 120px;
-	border-radius: 0 0 100px 100px; 
+	border-radius: 0 0 100px 100px; /* top-left | top-right | bottom-right | bottom-left */
 } 
 
 .left_leg { 
@@ -118,11 +118,10 @@ p {
 } 
 
 .left_leg:hover {
-	-webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);/*confirm rotation work in chrome & safari*/
+    -moz-transform: rotate(20deg); /*confirm rotation works in mozilla*/
+    -ms-transform: rotate(20deg);/*confirm rotation works in edge*/
+    transform: rotate(20deg);/*gives elements 2d or 3d transformations*/
 }
 
 .right_leg { 
@@ -131,12 +130,10 @@ p {
 }
 
 .right_leg:hover {
-	-webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-	position:absolute;
+	-webkit-transform: rotate(-20deg);/*confirm rotation work in chrome & safari*/
+    -moz-transform: rotate(-20deg);/*confirm rotation works in mozilla*/
+    -ms-transform: rotate(-20deg);/*confirm rotation works in edge*/
+    transform: rotate(-20deg);/*gives elements 2d or 3d transformations*/
 }
 
 .left_eye, .right_eye { 
@@ -150,9 +147,9 @@ p {
 } 
 
 .left_eye { 
-	position: relative; 
-	top: 100px; 
-	left: 40px; 
+	position: relative; /*element will adjust away from normal position */
+	top: 100px; /*Sets the top margin edge for a positioned box*/
+	left: 40px; /*Sets the left margin edge for a positioned box*/
 } 
 
 .right_eye { 
